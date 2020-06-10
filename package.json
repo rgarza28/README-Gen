@@ -1,0 +1,25 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "Create a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.0.0",
+    "inquirer": "^6.5.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgarza28/README-Gen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rgarza28/README-Gen/issues"
+  },
+  "homepage": "https://github.com/rgarza28/README-Gen#readme"
+}
