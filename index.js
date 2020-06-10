@@ -9,15 +9,15 @@ const writeFileAsync = util.promisify(fs.writeFile);
 const questions = [
     {
         message: "What is your project title?",
-        name: "Title"
+        name: "title"
     },
     {
         message: "Provide a description of your project",
-        name: "Description"
+        name: "description"
     },
     {
         message: "What command should be used to install?",
-        name: "Install"
+        name: "install"
     },
     {
         message: "What can this repo be used for?",
@@ -59,9 +59,9 @@ async function init() {
     try {
         const answers = await askUser();
 
-        let github = await axios.get('https://api.github.com/users/${answers.username}')
+        let github = await axios.get(`https://api.github.com/users/${answers.username}`)
 
-        var md = generateMarkdown(answers, github.data);
+        const md = generateMarkdown(answers, github.data);
 
         await writeFileAsync("README.md", md);
 
@@ -70,6 +70,6 @@ async function init() {
     } catch (err) {
         console.log(err);
     }
-}
+};
 
 init();

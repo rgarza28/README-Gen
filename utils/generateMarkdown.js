@@ -1,4 +1,4 @@
-function generateMarkdown(data) {
+function generateMarkdown(answers, data) {
   return `
 
 
@@ -49,16 +49,6 @@ ${answers.email}<br>
 
 `;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
